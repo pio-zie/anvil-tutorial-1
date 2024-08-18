@@ -11,7 +11,7 @@ components:
   - name: outlined_card_1
     properties: {role: outlined-card}
     type: ColumnPanel
-    layout_properties: {grid_position: 'SFTBDI,VTEHYU'}
+    layout_properties: {grid_position: 'MFIXWV,UILYKS'}
     components:
     - name: label_1
       properties: {text: Feedback form, role: headline}
@@ -22,7 +22,7 @@ components:
       properties: {text: 'Name:'}
       type: Label
       layout_properties: {grid_position: 'TVQPPI,KSUBUS'}
-    - name: text_box_1
+    - name: name_box
       properties: {}
       type: TextBox
       layout_properties: {grid_position: 'TVQPPI,ZCLDZT'}
@@ -30,7 +30,7 @@ components:
       properties: {text: 'Email:'}
       type: Label
       layout_properties: {grid_position: 'UDUZRA,SBBCDN'}
-    - name: text_box_2
+    - name: email_box
       properties: {}
       type: TextBox
       layout_properties: {grid_position: 'UDUZRA,CHUUXX'}
@@ -38,14 +38,15 @@ components:
       properties: {text: 'Feedback:'}
       type: Label
       layout_properties: {grid_position: 'ZMIYKQ,KUWFXK'}
-    - name: text_box_3
-      properties: {}
-      type: TextBox
-      layout_properties: {grid_position: 'ADPEVL,KZBWMN'}
-    - name: button_1
-      properties: {text: button_1, role: filled-button}
+    - name: feedback_box
+      properties: {height: 147}
+      type: TextArea
+      layout_properties: {grid_position: 'FLERQV,VGPHMZ'}
+    - name: submit_button
+      properties: {text: Submit, role: filled-button}
       type: Button
       layout_properties: {grid_position: 'ZQBUTL,WZTCPW'}
+      event_bindings: {click: submit_button_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links
