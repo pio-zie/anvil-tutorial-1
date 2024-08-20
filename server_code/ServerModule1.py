@@ -20,7 +20,7 @@ from datetime import datetime
 #   return 42
 #
 @anvil.server.callable
-def send_feedback(name, email, feedback):
+def send_feedback(name, email, feedback,recommendation):
   # Send yourself an email each time feedback is submitted
-  app_tables.feedback.add_row(name=name,email=email,feedback=feedback,created=datetime.now())
+  app_tables.feedback.add_row(name=name,email=email,feedback=feedback,created=datetime.now(),recommendation=recommendation)
   

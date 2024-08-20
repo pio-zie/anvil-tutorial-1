@@ -33,4 +33,7 @@ db_schema:
     - name: created
       admin_ui: {width: 200, order: 3}
       type: datetime
+    - name: recommendation
+      admin_ui: {order: 4, width: 200}
+      type: string
     title: feedback

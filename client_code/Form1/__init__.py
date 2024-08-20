@@ -18,7 +18,9 @@ class Form1(Form1Template):
     name = self.name_box.text
     email = self.email_box.text
     feedback=self.feedback_box.text
-    anvil.server.call('send_feedback', name, email, feedback)
+    recommendation = self.dropdown_list.selected_value
+    print(recommendation)
+    anvil.server.call('send_feedback', name, email, feedback,recommendation)
     Notification("Feedback submitted!").show()
     self.clear_inputs()
   
@@ -27,3 +29,4 @@ class Form1(Form1Template):
     self.name_box.text = ""
     self.email_box.text = ""
     self.feedback_box.text = ""
+    self.dropdown_list.selected_value = "Very unlikely"
